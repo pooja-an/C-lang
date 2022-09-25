@@ -1,0 +1,31 @@
+/*
+Prime number in C: Prime number is a number that is greater than 1 and divided by 1 or itself. In other words, prime numbers can't be divided by other numbers than itself or 1. 
+For example 2, 3, 5, 7, 11, 13, 17, 19, 23.... are the prime numbers.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    int num, i;
+    
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    
+    for(i=2;i<(num/2);i++)
+    {
+        if(num%i == 0)
+        {
+            printf("Not a prime number. It was divisible by %d.",i);
+            break;
+        }
+    }
+
+    if(i == (num/2))
+    {
+        printf("%d is a Prime number.",num);
+    }
+
+
+    return 0;
+}
